@@ -2,20 +2,20 @@
 // Добавил цикл - for в подпрограмму, цикл - while в программу
 
 // Подпрограмма:
-int Exp(int E)
+int Exp(int number, int degree)
 {
-    System.Console.Write("Введите степень числа: ");
-    int B = Convert.ToInt32(Console.ReadLine());
-    int a = 1;
-    for (int b = 0; b < B; b++)
+    int ex = 1;
+    for (int b = 0; b < degree; b++)
     {
-        a = a * E;
+        ex = ex * number;
     }
-    return a; 
+    return ex;
 }
 
 // Программа:
 System.Console.Write("Введите число: ");
 int A = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Введите степень числа: ");
+int B = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine($"Число {A} в заданной степени будет равно: {Exp(A)}");
+System.Console.WriteLine($"Число {A} в степени {B} будет равно: {Exp(A,B)}");
