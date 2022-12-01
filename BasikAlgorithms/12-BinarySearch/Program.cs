@@ -23,7 +23,7 @@ int BinSearch(int[] a, int find)
     i = left + (right - left) / 2;
     while (a[i] != find && left < right)
     {
-        if (find > a[i]) left = i;
+        if (find > a[i]) left = i + 1;
         else right = i;
         i = left + (right - left) / 2;
     }
@@ -32,9 +32,9 @@ int BinSearch(int[] a, int find)
 }
 
 int find = 11;
-int [] array = RandomArray();
+int[] array = RandomArray();
 array[7] = 11;
 Array.Sort(array); // Сортировка от меньшего к большему
 System.Console.WriteLine("    0    1    2    3    4    5    6    7    8    9");
 Print(array);
-System.Console.WriteLine($"\n{BinSearch(array,find)}");
+System.Console.WriteLine($"\n{BinSearch(array, find)}");
