@@ -8,7 +8,7 @@ for (int i = 0; i < ss.Length; i++)
     int c=n[2];
     */
 
-string[] ss = Console.Readline().Split(' ');
+string[] ss = Console.ReadLine().Split(' ');
 int[] n = Array.ConvertAll<string, int>(ss, Convert.ToInt32);
 int a = n[0];
 int b = n[1];
